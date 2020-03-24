@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>웹 어플리케이션 실습 2</title>
+</head>
+
+<body>
+<h1>테이블 실습</h1>
+<hr>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>A1</th>
+            <th>A2</th>
+            <th>A3</th>
+            <th>A4</th>
+            <th>A5</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2">A1</td>
+            <!--td>A2</td-->
+            <td>A3</td>
+            <td colspan="2" rowspan="2">A4</td>
+            <!-- td>A5</td -->
+        </tr>
+        <tr>
+            <td>A1</td>
+            <td>A2</td>
+            <td>A3</td>
+            <!--td>A4</td>
+            <td>A5</td-->
+        </tr>
+        <tr>
+            <td>A1</td>
+            <td>A2</td>
+            <td rowspan="2">A3</td>
+            <td>A4</td>
+            <td>A5</td>
+        </tr>
+        <tr>
+            <td>A1</td>
+            <td>A2</td>
+            <!--td>A3</td-->
+            <td>A4</td>
+            <td>A5</td>
+        </tr>
+    </tbody>
+</table>
+
+
+</body>
+
+</html>
