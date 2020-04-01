@@ -1,0 +1,38 @@
+body {
+    width: 300px;
+    margin: 50px auto;
+    text-align: center;
+}
+h1  {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img {
+    float:"right";
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login_id {
+    font-size: 14px;
+    margin-right: 22px;
+
+}
+
+.login_pw {
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+
+input[type="submit"] {
+    /* float: right; */
+    width: 80px;
+    height: 50px;
+    background: #FFBB00;
+    border-radius: 5px;
+    border: none;
+   }

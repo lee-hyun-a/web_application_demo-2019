@@ -1,0 +1,101 @@
+
+
+/* 태그 선택자 */
+h1, h2 {
+    background-color: red;
+}
+
+/* 아이디 선택자 */
+/*#chapter1 {
+    background-color: blue;
+}
+
+#chapter2 {
+    background-color: green;
+} 
+
+#chapter3 {
+    background-color: gray;
+} */
+
+/* 클래스 선택자 */
+.chapter {
+    background-color: white;
+    /* border: 1px solid black; */
+    /* margin: 5px; */
+    padding: 5px;
+}
+
+/* 속성 선택자 */
+/* div[class^="chap"] {
+    background-color: blue;
+} */
+
+/* 상태 선택자 */
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-shadow: black;
+    color: aqua;
+}
+
+/* 선택자 조합 */
+span > a {
+    font-size: 20px;
+}
+
+div a:hover {
+    font-size: 30px;
+    font-weight: bold;
+ }
+
+div#chapter1.chapter > h3 {
+     font-size: 50px;
+ }
+
+ /* 웹 모양 */
+ /* 라디오 버튼 숨김 */
+input[type="radio"] {
+    display: none;     
+}
+
+/* 라디오 옆에 라벨 스타일 */
+input[type="radio"] + label {
+    display: inline; 
+    cursor: pointer;
+    border: 1px solid #999;
+    background-color: white;
+    padding: 4px 12px;
+    border-radius: 4px 4px 0px 0px;
+    position: relative;
+    top: 1px;
+}
+
+/* 라벨에 마우스 커서 올릴 때 효과 */
+input[type="radio"] + label:hover {
+    color: blue;
+    font-weight: bold; 
+}
+
+/* 선택된 라디오의 라벨에 효과 */
+input[type="radio"]:checked + label {
+    color: aqua;
+    font-weight: bold;
+    border-bottom: 1px solid transparent;
+}
+
+/* 기본적으로 모든 챕터 숨김 */
+input[type="radio"] ~ .chapter {
+    display: none;
+    /* border-top: 1px solid #999;
+    padding: 12px; */
+}
+
+/* 선택된 라디오와 일치하는 챕터만 보이기 */
+input[type="radio"]#chapter-tab-1:checked ~ #chapter1,
+input[type="radio"]#chapter-tab-2:checked ~ #chapter2,
+input[type="radio"]#chapter-tab-3:checked ~ #chapter3{
+    display: block;
+}
