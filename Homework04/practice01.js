@@ -14,7 +14,7 @@ for (let index in list) {
 
 // ----------------------------------------------------
 
-var obj = {}
+var obj = {};
 
 for (let index in list) {
     if (index<10){
