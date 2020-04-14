@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <meta charset="utf-8">
+
+    <script>
+
+        window.onload = () => {
+            var h1Title = document.getElementById("title");
+            //alert(h1Title.textContent);
+            h1Title.textContent= "Hello world";  //처음에 불러올 때는 5주차 실습으로 불러오지만 불러옴과 동시에 Hello world로 내용물 바꿈
+
+            var span = document.getElementsByClassName("spanClass");
+            if (span.length == 0) return alert("못찾음");
+            //span[0].textContent = "<b>TEST</b>";
+            span[0].innerHTML= "<b>TEST</b>";
+
+            span[0].style.backgroundColor = "red";
+
+            //alert(span[0].getAttribute("data-value"));
+            //var img = document.getElementsByTagName("img");
+            //img[0].src="https://via.placeholder.co/300x90.png?text=Hello_World";
+        };
+
+        function onErrorImg(img) {
+            //console.log(img);
+            img.src = "https://via.placeholder.co/300x90.png?text=On_Error_Img";
+        }
+
+        function querySelect() {
+            //alert("test");
+            var sel = prompt("qeury?");
+            console.log(sel);
+            //var selectedTag = document.querySelector(sel); // querySelector : 쿼리문으로 찾은 첫번째 것을 반환해줌 --> 여러개를 받고 싶으면 queryselectorAll
+
+            var selectedTags = document.querySelectorAll(sel);
+            selectedTags.forEach((tag, index) => {   // forEach : 배열을 하나하나씩 실행시켜줌
+                tag.style.color=["red","blue","green"][index % 3];
+            });
+
+            //selectedTag.style.color="red";
+        }
+
+        
+
+    </script>
+
+</head>
+<body>
+
+    <h1 id="title">5주차 실습</h1>
+    <span class="spanClass" data-value="1">Test</span>
+    <img src="https://via.placeholder.com/300x90.png" onerror="onErrorImg(this)"><br>
+    <a href="javascript:querySelect();">셀렉터 테스트</a><br>
+    <a href="javascript:querySelect();">셀렉터 테스트</a><br>
+    <a href="javascript:querySelect();">셀렉터 테스트</a><br>
+    <a href="javascript:querySelect();">셀렉터 테스트</a><br>
+    <a href="javascript:querySelect();">셀렉터 테스트</a><br>
+    <a href="javascript:querySelect();">셀렉터 테스트</a>
+
+</body>
+</html>
