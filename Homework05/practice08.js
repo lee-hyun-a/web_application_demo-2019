@@ -37,6 +37,7 @@ function addMessage(message) {
 function clearMessage() {
 
     $(".chat-box .new-msg").remove();
+    //$(".chat-box .message:not(.template)").remove();
 
 }
 
