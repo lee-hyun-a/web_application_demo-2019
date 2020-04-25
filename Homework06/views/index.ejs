@@ -2,12 +2,18 @@
 <html>
 <head>
     <meta charset = "utf-8">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 </head>
 <body>
     <label><%=time %> </label>
     <form method="POST">
         <input type="text" name="nick" placeholder="Enter Nick">
     </form>
+    
+    <p class="date">
+        <script>$(".date").html(moment().format("YYYY/MM/DD HH:mm:ss"));</script>
+    </p>
 
 </body>
 </html>
