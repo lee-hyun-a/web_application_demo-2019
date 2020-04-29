@@ -4,7 +4,7 @@ $(document).ready(() => {
             onEnterMessage();
         }
     });
-    addMessage(nick, true);
+    addMessage(nick, 0);
 
 });
 
@@ -15,18 +15,20 @@ function onEnterMessage() {
     if (message == "/clear") {
         clearMessage();
     } else {
-        addMessage(message, false, true);
+        addMessage(message, 1);
     }
 }
 
-function addMessage(message, isSystem = false, isSelf = false) {
+//messageType : 0: System, 1: Self, 2: Other
+function addMessage(message, messageType = 1) {
+    if (message == null || message.trim() == "") return;
     var chatBox = $(".chat-box");
 
     var newMessage = $(".chat-box .message.template").clone();
     newMessage.removeClass("template");
     newMessage.addClass("new-msg");
-    if (isSystem) newMessage.addClass("system");
-    if (isSelf) newMessage.addClass("self"); 
+    if (messageType == 0) newMessage.addClass("system");
+    if (messageType == 1) newMessage.addClass("self");
 
     chatBox.append(newMessage);
 

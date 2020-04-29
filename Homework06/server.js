@@ -1,4 +1,4 @@
-var moment = require("moment");
+const moment = require("moment");
 const express = require("express");
 const app = express();
 
@@ -8,7 +8,7 @@ app.set("view engine", "ejs");
 app.use(express.static('static'));
 
 app.get("/", (request, response) => {
-    response.render("index", { time: moment().format("YYYY/MM/DD HH:mm:ss") });
+    response.render("index", { time: moment().format("YYYY/MM/DD HH:mm:ss").toString() });
 });
 
 app.post("/", (request, response) => {
