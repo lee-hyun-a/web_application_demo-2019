@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="chat.css">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="chat.js"></script>
+</head>    
+<body> 
+    <div id="enter">
+        <form onsubmit="onEnterRoom(); return false;">
+        입장<br>
+        <input type="text" name="nick" placeholder="닉네임"><br>
+        <input type="text" name="room" placeholder="방이름"><br>
+        <input type="submit" value="입장">
+        </form>
+    </div> 
+    <div id="chat-window" class="full-screen" style="display: none;">
+        <div class="chat-box">
+            <div class="message template">
+                <img src="https://via.placeholder.com/30x30.png">
+                <div class="text">메세지 내용</div>
+                <div class="time">YYYYMMDD HH:mm</div>
+            </div>
+            
+        </div>
+        <div class="input-message">
+            <input type="text">
+        </div>
+    </div> 
+
+</body>
+</html>
